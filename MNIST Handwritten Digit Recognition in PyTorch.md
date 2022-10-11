@@ -6,7 +6,7 @@
 
 #### Links
 1. <a href = "https://nextjournal.com/gkoehler/pytorch-mnist">Link of the Notes</a>
-2. <a href = "https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53"> Convolution Neural Network</a>
+
 4. Computational Graphs
 
  - builds a simple convolutional neural network
@@ -14,8 +14,7 @@
 : a Deep learning algorithm which can take input image, assign importance (learnable, weights, and biases) to various aspects/ objects in the image and be able to differentiate one from the other
   - the Pre-Process required is much less as compared to classification algorithms
 
-<center> ## Setting up the Environment
- </center>
+## Setting up the Environment
 - using Pytorch to recognize MNIST's handwriting digits in this article
 - Pytorch
 : very popular framework for deep learning
@@ -28,16 +27,8 @@
 
 		 import torch
 		 import torchvision
-
-<center> ## Preparing the Dataset 
-</center>
+## Preparing the Dataset 
 - First, we have to define the hyperparameters
-
-<mark>What are epochs in Neural Network?</mark>
-
-- One Epoch
-: when an Entire dataset is passed forward and backward through the neural Network ONCE
-- the number of epochs defines how many times we'll loop over the complete training dataset
 
 #### Code:
 - setting hyperparametes
@@ -45,18 +36,10 @@
 <mark> what is the log_interval?</mark>
 <mark>What is the purpose for the random seed</mark>
 
-<img src = "/home/mingye/Documents/Notes/Python/pics/Screenshot from 2022-09-01 10-37-22.png">
-
 - `torch.manual_seed` - sets the seeds for generating random numbers. Generator object
 - the purpose of the random seed, is for repeatable experiments and anything using random generation
 - `cuDNN` use nondeterministic algorithms to disabled setting `torch.backends.cudnn.enabled - False`
 
-<mark>what are nondeterministic algorithms? </mark>
-
-- NonDeterministic Algorithm
-: provide different outputs for the same inputs on different executions
-  - Deterministic Algorithms
-: can only produce a single output for a single input even on different runs
 
 - TorchVision
 : a library for Computer Vision that goes hand in hand in with Pytorch
@@ -64,21 +47,6 @@
 - Batch_size - 64 for training
 - Size 1000 for testing on this dataset
 
-**What is the different between training and testing? **
-- Training is using the batches to train and teach the AI model
-- Testing is actually using the AI model to predict handwritings
-
-**What is activation function?**
-
-**What is the difference between nonlinear and linear activation function?**
-
-**What is  a tensor image?**
-
-- Tensors are like buckets of numbers of a specific shape and a certain rank (dimensionalty)
-
-- are used for Machine learning. Represents input data and output data
-- the size of each dimension in a Tensor
-- Ex: 3D Tensor image [width, height, color]
 
 **what is normalizing?**
 
@@ -101,10 +69,6 @@ loading the MNIST dataset
 - below are making two variables: 
 1. train_loader (dataset used to train the AI model)
 2. test_loader (dataset used to test the AI Model)
-
-<img src = "/home/mingye/Documents/Notes/Python/pics/Screenshot from 2022-09-01 10-37-48.png">
-
-<img src = "/home/mingye/Documents/Notes/Python/pics/Screenshot from 2022-09-01 10-37-22.png">
 
 - PyTorch's DataLoader contains a few interesting option other than the dataset and batch size
 - could use `num_workers>1` could be used to use subprocesses to asynchronously load data or pin_memory to speed up RAM to GPU transfers

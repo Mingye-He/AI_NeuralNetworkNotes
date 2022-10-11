@@ -3,9 +3,14 @@
 <a href = "https://towardsdatascience.com/what-are-hyperparameters-and-how-to-tune-the-hyperparameters-in-a-deep-neural-network-d0604917584a#:~:text=Deep%20Neural%20Network%3F-,What%20are%20hyperparameters%3F,optimizing%20the%20weights%20and%20bias).">Link</a>
 
 
-hyperpararmeters
+hyperparameters
 : variable which determines the network structure and how the network is trained
 
+parameters
+: are data estimated from the model
+- the predictions that a AI model
+
+- parameters that are specifically set
 - set before training happens
 
 1. Number of Hidden Layers and Units
@@ -93,3 +98,7 @@ Momentum
 - Mini batch size is the number of sub samples given to the network after which parameters update happens
 - good default size : 32, 64, 128, 256
 
+## Epochs
+- One Epoch
+: when an Entire dataset is passed forward and backward through the neural Network ONCE
+- the number of epochs defines how many times we'll loop over the complete training dataset
